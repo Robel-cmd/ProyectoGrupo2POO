@@ -9,5 +9,5 @@ package controlador;
  * @author hanzo
  */
 public class ControladorLogin {
-    
+    private String campo;
 }
