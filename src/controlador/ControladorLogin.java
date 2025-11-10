@@ -9,5 +9,7 @@ package controlador;
  * @author hanzo
  */
 public class ControladorLogin {
-    private String campo;
+    System.out.println("Controlador de Login");
+    System.out.println("Ingrese el ID de usuario:");
+    System.out.println("Ingrese la contraseña:");
 }
