@@ -4,12 +4,21 @@
  */
 package controlador;
 
+import java.util.Scanner;
+
 /**
  *
  * @author hanzo
  */
 public class ControladorLogin {
-    System.out.println("Controlador de Login");
-    System.out.println("Ingrese el ID de usuario:");
-    System.out.println("Ingrese la contraseña:");
+    public ControladorLogin() {
+        System.out.println("Controlador de Login");
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("Ingrese el ID de usuario:");
+        String id = scanner.nextLine();
+        System.out.println("Ingrese la contraseña:");
+        String password = scanner.nextLine();
+    }
+
+
 }
