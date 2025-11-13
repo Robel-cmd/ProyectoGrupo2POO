@@ -1,21 +1,24 @@
-/*
- * Click nbfs://nbhost/SystemFileSystem/Templates/Licenses/license-default.txt to change this license
- * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JPanel.java to edit this template
- */
 package vista;
-
+import java.awt.Color;
+import java.awt.Cursor;
 /**
  *
- * @author hanzo
+ * @author sofic
  */
-public class VistaLogin extends javax.swing.JPanel {
+public class VistaLogin extends javax.swing.JFrame {
 
     /**
      * Creates new form VistaLogin
      */
     public VistaLogin() {
         initComponents();
-    }
+         configurarBotonRegistrarse();
+         
+    ButtomRegistrarse.setContentAreaFilled(false);
+    ButtomRegistrarse.setOpaque(false);
+    ButtomRegistrarse.setForeground(new java.awt.Color(255, 255, 255));
+    ButtomRegistrarse.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,19 +29,205 @@ public class VistaLogin extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+        BgWhite = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        Usuario = new javax.swing.JTextField();
+        Contraseña = new javax.swing.JPasswordField();
+        ButtomAcceder = new javax.swing.JButton();
+        ButtomOlvideContra = new javax.swing.JButton();
+        ButtomRegistrarse = new javax.swing.JButton();
+        Logo = new javax.swing.JLabel();
+        BgGradient = new javax.swing.JLabel();
+
+        setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        BgWhite.setBackground(new java.awt.Color(255, 255, 255));
+
+        jLabel1.setBackground(new java.awt.Color(255, 255, 255));
+        jLabel1.setFont(new java.awt.Font("Arial", 3, 24)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(0, 0, 0));
+        jLabel1.setText("INICIAR SESIÓN");
+
+        Usuario.setBackground(new java.awt.Color(204, 204, 204));
+        Usuario.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Usuario.setForeground(new java.awt.Color(153, 153, 153));
+        Usuario.setText("   USUARIO");
+        Usuario.setBorder(null);
+        Usuario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                UsuarioActionPerformed(evt);
+            }
+        });
+
+        Contraseña.setBackground(new java.awt.Color(204, 204, 204));
+        Contraseña.setFont(new java.awt.Font("Arial", 0, 14)); // NOI18N
+        Contraseña.setForeground(new java.awt.Color(153, 153, 153));
+        Contraseña.setText("  jPasswordFie");
+        Contraseña.setAlignmentY(1.0F);
+        Contraseña.setBorder(null);
+        Contraseña.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ContraseñaActionPerformed(evt);
+            }
+        });
+
+        ButtomAcceder.setBackground(new java.awt.Color(233, 148, 30));
+        ButtomAcceder.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ButtomAcceder.setForeground(new java.awt.Color(255, 255, 255));
+        ButtomAcceder.setText("ACCEDER");
+        ButtomAcceder.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        ButtomAcceder.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ButtomAccederActionPerformed(evt);
+            }
+        });
+
+        ButtomOlvideContra.setBackground(new java.awt.Color(255, 255, 255));
+        ButtomOlvideContra.setFont(new java.awt.Font("Arial", 2, 12)); // NOI18N
+        ButtomOlvideContra.setForeground(new java.awt.Color(193, 58, 37));
+        ButtomOlvideContra.setText("¿Olvidaste tu contraseña?");
+        ButtomOlvideContra.setBorder(null);
+
+        javax.swing.GroupLayout BgWhiteLayout = new javax.swing.GroupLayout(BgWhite);
+        BgWhite.setLayout(BgWhiteLayout);
+        BgWhiteLayout.setHorizontalGroup(
+            BgWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BgWhiteLayout.createSequentialGroup()
+                .addGroup(BgWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(BgWhiteLayout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(BgWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 319, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                    .addGroup(BgWhiteLayout.createSequentialGroup()
+                        .addGap(109, 109, 109)
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(51, Short.MAX_VALUE))
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, BgWhiteLayout.createSequentialGroup()
+                .addGap(0, 0, Short.MAX_VALUE)
+                .addGroup(BgWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(ButtomOlvideContra, javax.swing.GroupLayout.PREFERRED_SIZE, 183, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(BgWhiteLayout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(ButtomAcceder, javax.swing.GroupLayout.PREFERRED_SIZE, 141, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addGap(121, 121, 121))
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+        BgWhiteLayout.setVerticalGroup(
+            BgWhiteLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(BgWhiteLayout.createSequentialGroup()
+                .addGap(126, 126, 126)
+                .addComponent(jLabel1)
+                .addGap(37, 37, 37)
+                .addComponent(Usuario, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(31, 31, 31)
+                .addComponent(Contraseña, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(ButtomOlvideContra, javax.swing.GroupLayout.PREFERRED_SIZE, 27, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addComponent(ButtomAcceder, javax.swing.GroupLayout.PREFERRED_SIZE, 51, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(98, Short.MAX_VALUE))
         );
+
+        getContentPane().add(BgWhite, new org.netbeans.lib.awtextra.AbsoluteConstraints(470, 0, 410, 500));
+
+        ButtomRegistrarse.setBackground(new java.awt.Color(193, 58, 37));
+        ButtomRegistrarse.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        ButtomRegistrarse.setForeground(new java.awt.Color(255, 255, 255));
+        ButtomRegistrarse.setText("REGISTRARSE");
+        ButtomRegistrarse.setToolTipText("");
+        ButtomRegistrarse.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
+        ButtomRegistrarse.setFocusCycleRoot(true);
+        ButtomRegistrarse.setFocusPainted(false);
+        ButtomRegistrarse.setName(""); // NOI18N
+        getContentPane().add(ButtomRegistrarse, new org.netbeans.lib.awtextra.AbsoluteConstraints(160, 370, 170, 50));
+        ButtomRegistrarse.setForeground(new java.awt.Color(255, 255, 255));
+
+        ButtomRegistrarse.setContentAreaFilled(false);
+
+        Logo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/QuesoMarketlogo.png"))); // NOI18N
+        getContentPane().add(Logo, new org.netbeans.lib.awtextra.AbsoluteConstraints(-10, 80, 480, 240));
+
+        BgGradient.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/Bglogin.png"))); // NOI18N
+        getContentPane().add(BgGradient, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 870, 500));
+
+        pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void UsuarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_UsuarioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_UsuarioActionPerformed
+
+    private void ContraseñaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ContraseñaActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ContraseñaActionPerformed
+
+    private void ButtomAccederActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ButtomAccederActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ButtomAccederActionPerformed
+
+    /**
+     * @param args the command line arguments
+     */
+    public static void main(String args[]) {
+        /* Set the Nimbus look and feel */
+        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+         */
+        try {
+            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+                if ("Nimbus".equals(info.getName())) {
+                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+                    break;
+                }
+            }
+        } catch (ClassNotFoundException ex) {
+            java.util.logging.Logger.getLogger(VistaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (InstantiationException ex) {
+            java.util.logging.Logger.getLogger(VistaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (IllegalAccessException ex) {
+            java.util.logging.Logger.getLogger(VistaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            java.util.logging.Logger.getLogger(VistaLogin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+        //</editor-fold>
+
+        /* Create and display the form */
+        java.awt.EventQueue.invokeLater(new Runnable() {
+            public void run() {
+                new VistaLogin().setVisible(true);
+            }
+        });
+    }
+
+        private void configurarBotonRegistrarse() {
+        ButtomRegistrarse.setContentAreaFilled(false);
+        ButtomRegistrarse.setOpaque(false);
+        ButtomRegistrarse.setBorder(javax.swing.BorderFactory.createCompoundBorder(
+            new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true),
+             javax.swing.BorderFactory.createEmptyBorder(10, 20, 10, 20)
+                  ));
+        ButtomRegistrarse.setForeground(new java.awt.Color(255, 255, 255));
+        ButtomRegistrarse.addMouseListener(new java.awt.event.MouseAdapter() {
+             public void mouseEntered(java.awt.event.MouseEvent evt) {
+        ButtomRegistrarse.setForeground(new java.awt.Color(200, 200, 200)); // Gris claro
+                     }
+            public void mouseExited(java.awt.event.MouseEvent evt) {
+        ButtomRegistrarse.setForeground(new java.awt.Color(255, 255, 255)); // Blanco
+                    }
+               });
+          }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel BgGradient;
+    private javax.swing.JPanel BgWhite;
+    private javax.swing.JButton ButtomAcceder;
+    private javax.swing.JButton ButtomOlvideContra;
+    private javax.swing.JButton ButtomRegistrarse;
+    private javax.swing.JPasswordField Contraseña;
+    private javax.swing.JLabel Logo;
+    private javax.swing.JTextField Usuario;
+    private javax.swing.JLabel jLabel1;
     // End of variables declaration//GEN-END:variables
 }
