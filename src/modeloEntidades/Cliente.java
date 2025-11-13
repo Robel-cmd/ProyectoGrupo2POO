@@ -4,16 +4,19 @@
  */
 package modeloEntidades;
 
+import java.util.Date;
+
 /**
  *
  * @author hanzo
  */
-public class modeloCliente {
+public class Cliente {
     private int id;
     private String nombres;
     private String apellidos;
     private int dni;
     private int telefono;
+    private Date fechaNacimiento;
     private int correo;
     
     // getters
