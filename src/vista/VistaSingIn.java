@@ -181,6 +181,7 @@ public class VistaSingIn extends javax.swing.JFrame {
 
         ButtonChangeLogIn.setBackground(new java.awt.Color(193, 58, 37));
         ButtonChangeLogIn.setFont(new java.awt.Font("Arial", 1, 18)); // NOI18N
+        ButtonChangeLogIn.setForeground(new java.awt.Color(255, 255, 255));
         ButtonChangeLogIn.setText("INICIAR SESIÓN");
         ButtonChangeLogIn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(255, 255, 255), 2, true));
         getContentPane().add(ButtonChangeLogIn, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 380, 180, 50));
