@@ -8,12 +8,13 @@ package vista;
  *
  * @author sofic
  */
-public class VistaClientes extends javax.swing.JFrame {
+public class VistaFactura extends javax.swing.JFrame {
 
     /**
      * Creates new form VistaClientes
      */
-    public VistaClientes() {
+    public VistaFactura() {
+      
         initComponents();
     }
 
