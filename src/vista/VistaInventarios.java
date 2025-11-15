@@ -54,21 +54,19 @@ public class VistaClientes extends javax.swing.JFrame {
         jTextField3 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
-        jLabel13 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
         jButton7 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jButton9 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
+        jSpinner1 = new javax.swing.JSpinner();
         Background_Clientes = new javax.swing.JLabel();
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/MenuBusqueda.png"))); // NOI18N
@@ -110,19 +108,19 @@ public class VistaClientes extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null},
+                {null, null, null, null, null}
             },
             new String [] {
-                "RTN", "Nombres", "Apellidos", "Telefono", "E-MAIL", "Fecha Nacimiento"
+                "Codigo Producto", "Nombre", "Categoria", "Precio Unitario", "Cantidad"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -161,7 +159,7 @@ public class VistaClientes extends javax.swing.JFrame {
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("¡Registre los clientes!");
+        jLabel4.setText("¡Registre los productos!");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, 30));
 
         jButton6.setBackground(new java.awt.Color(193, 58, 37));
@@ -173,10 +171,10 @@ public class VistaClientes extends javax.swing.JFrame {
         getContentPane().add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 200, 10, 180));
 
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel8.setText("RTN *");
+        jLabel8.setText("Codigo Producto *");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, 20));
 
-        jLabel9.setText("Complete la informacion de sus clientes");
+        jLabel9.setText("Complete la informacion de los productos");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, -1, 20));
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
@@ -190,7 +188,7 @@ public class VistaClientes extends javax.swing.JFrame {
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 150, -1));
 
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("Apellido *");
+        jLabel10.setText("Categoria *");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, 20));
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
@@ -204,7 +202,7 @@ public class VistaClientes extends javax.swing.JFrame {
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, 150, -1));
 
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel11.setText("Nombres *");
+        jLabel11.setText("Nombre *");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, 20));
 
         jTextField3.setBackground(new java.awt.Color(255, 255, 255));
@@ -218,7 +216,7 @@ public class VistaClientes extends javax.swing.JFrame {
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 150, -1));
 
         jLabel12.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel12.setText("Telefono *");
+        jLabel12.setText("Precio Unitario *");
         getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, -1, 20));
 
         jTextField4.setBackground(new java.awt.Color(255, 255, 255));
@@ -231,22 +229,8 @@ public class VistaClientes extends javax.swing.JFrame {
         });
         getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 150, -1));
 
-        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel13.setText("Fecha Nacimiento *");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, -1, 20));
-
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 150, -1));
-
         jLabel14.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel14.setText("E-MAIL *");
+        jLabel14.setText("Cantidad*");
         getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, 20));
 
         jButton7.setBackground(new java.awt.Color(233, 148, 30));
@@ -275,10 +259,6 @@ public class VistaClientes extends javax.swing.JFrame {
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("AGREGAR");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, -1, -1));
-
-        jDateChooser1.setBackground(new java.awt.Color(255, 255, 255));
-        jDateChooser1.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 150, -1));
 
         jButton9.setBackground(new java.awt.Color(233, 148, 30));
         jButton9.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
@@ -315,6 +295,7 @@ public class VistaClientes extends javax.swing.JFrame {
         jLabel17.setForeground(new java.awt.Color(0, 0, 0));
         jLabel17.setText("CLIENTES");
         getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 80, -1));
+        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 140, -1));
 
         Background_Clientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/MenuBusqueda.png"))); // NOI18N
         getContentPane().add(Background_Clientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 520));
@@ -341,10 +322,6 @@ public class VistaClientes extends javax.swing.JFrame {
     private void jTextField4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
-
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -392,13 +369,11 @@ public class VistaClientes extends javax.swing.JFrame {
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
-    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel12;
-    private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
@@ -419,12 +394,12 @@ public class VistaClientes extends javax.swing.JFrame {
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
+    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables
 }
