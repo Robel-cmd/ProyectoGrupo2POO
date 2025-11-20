@@ -43,7 +43,6 @@ public class VistaClientes extends javax.swing.JFrame {
         jButton3 = new javax.swing.JButton();
         jButton5 = new javax.swing.JButton();
         jLabel4 = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
         jScrollBar1 = new javax.swing.JScrollBar();
         jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
@@ -64,12 +63,19 @@ public class VistaClientes extends javax.swing.JFrame {
         jLabel7 = new javax.swing.JLabel();
         jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jButton9 = new javax.swing.JButton();
+        inventarios3 = new javax.swing.JLabel();
+        inventarios4 = new javax.swing.JLabel();
+        inventarios2 = new javax.swing.JLabel();
+        inventarios1 = new javax.swing.JLabel();
+        inventarios = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
+        jButton12 = new javax.swing.JButton();
+        jButton13 = new javax.swing.JButton();
         jLabel15 = new javax.swing.JLabel();
-        jLabel16 = new javax.swing.JLabel();
-        jLabel17 = new javax.swing.JLabel();
-        Background_Clientes = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        bg_Clientes = new javax.swing.JLabel();
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/MenuBusqueda.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -110,19 +116,19 @@ public class VistaClientes extends javax.swing.JFrame {
         jTable1.setForeground(new java.awt.Color(0, 0, 0));
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "RTN", "Nombres", "Apellidos", "Telefono", "E-MAIL", "Fecha Nacimiento"
+                "RTN", "Nombres", "Apellidos", "Telefono", "E-MAIL", "Fecha Nacimiento", "Estado"
             }
         ) {
             boolean[] canEdit = new boolean [] {
-                false, false, false, false, false, false
+                false, false, false, false, false, false, false
             };
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
@@ -137,14 +143,14 @@ public class VistaClientes extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
         jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 200, 580, 180));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 580, 180));
 
         jButton3.setBackground(new java.awt.Color(233, 148, 30));
         jButton3.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jButton3.setForeground(new java.awt.Color(255, 255, 255));
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/actualizar.png"))); // NOI18N
         jButton3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 400, 60, 60));
+        getContentPane().add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 410, 60, 60));
 
         jButton5.setBackground(new java.awt.Color(233, 148, 30));
         jButton5.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
@@ -156,21 +162,14 @@ public class VistaClientes extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 400, 60, 60));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 410, 60, 60));
 
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
         jLabel4.setText("¡Registre los clientes!");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, 30));
-
-        jButton6.setBackground(new java.awt.Color(193, 58, 37));
-        jButton6.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/factura.png"))); // NOI18N
-        jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 370, 80, 80));
-        getContentPane().add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 200, 10, 180));
+        getContentPane().add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 220, 10, 180));
 
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
         jLabel8.setText("RTN *");
@@ -190,7 +189,7 @@ public class VistaClientes extends javax.swing.JFrame {
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 150, -1));
 
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("Apellido *");
+        jLabel10.setText("Apellido*");
         getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, 20));
 
         jTextField2.setBackground(new java.awt.Color(255, 255, 255));
@@ -204,7 +203,7 @@ public class VistaClientes extends javax.swing.JFrame {
         getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, 150, -1));
 
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel11.setText("Nombres *");
+        jLabel11.setText("Nombre*");
         getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 80, -1, 20));
 
         jTextField3.setBackground(new java.awt.Color(255, 255, 255));
@@ -218,8 +217,8 @@ public class VistaClientes extends javax.swing.JFrame {
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 150, -1));
 
         jLabel12.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel12.setText("Telefono *");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 130, -1, 20));
+        jLabel12.setText("Telefono*");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, 20));
 
         jTextField4.setBackground(new java.awt.Color(255, 255, 255));
         jTextField4.setForeground(new java.awt.Color(0, 0, 0));
@@ -229,11 +228,11 @@ public class VistaClientes extends javax.swing.JFrame {
                 jTextField4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 150, 150, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 150, -1));
 
         jLabel13.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel13.setText("Fecha Nacimiento *");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 130, -1, 20));
+        jLabel13.setText("Fecha Nacimiento*");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, -1, 20));
 
         jTextField5.setBackground(new java.awt.Color(255, 255, 255));
         jTextField5.setForeground(new java.awt.Color(0, 0, 0));
@@ -243,81 +242,137 @@ public class VistaClientes extends javax.swing.JFrame {
                 jTextField5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 150, 150, -1));
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 150, -1));
 
         jLabel14.setForeground(new java.awt.Color(102, 102, 102));
         jLabel14.setText("E-MAIL *");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 130, -1, 20));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, 20));
 
         jButton7.setBackground(new java.awt.Color(233, 148, 30));
         jButton7.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jButton7.setForeground(new java.awt.Color(255, 255, 255));
         jButton7.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/lupa (2).png"))); // NOI18N
         jButton7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 400, 60, 60));
+        getContentPane().add(jButton7, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 410, 60, 60));
 
         jLabel3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
         jLabel3.setText("ELIMINAR");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 470, -1, -1));
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(390, 480, -1, -1));
 
         jLabel5.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 0));
         jLabel5.setText("ACTUALIZAR");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 470, -1, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(500, 480, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(0, 0, 0));
         jLabel6.setText("BUSCAR");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 470, -1, -1));
+        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(630, 480, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(0, 0, 0));
         jLabel7.setText("AGREGAR");
-        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 470, -1, -1));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, -1, -1));
 
         jDateChooser1.setBackground(new java.awt.Color(255, 255, 255));
         jDateChooser1.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 150, 150, -1));
+        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 150, -1));
 
         jButton9.setBackground(new java.awt.Color(233, 148, 30));
         jButton9.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("+");
         jButton9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 400, 60, 60));
+        getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 60, 60));
+
+        inventarios3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios3.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios3.setText("Categorias");
+        getContentPane().add(inventarios3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 80, 20));
+
+        inventarios4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios4.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios4.setText("Inventarios");
+        getContentPane().add(inventarios4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 80, 20));
+
+        inventarios2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios2.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios2.setText("Usuarios");
+        getContentPane().add(inventarios2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 80, 20));
+
+        inventarios1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios1.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios1.setText("Factura");
+        getContentPane().add(inventarios1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 80, 20));
+
+        inventarios.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios.setText("Clientes");
+        getContentPane().add(inventarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 80, 20));
+
+        jButton6.setBackground(new java.awt.Color(193, 58, 37));
+        jButton6.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/factura (3).png"))); // NOI18N
+        jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 160, 60));
 
         jButton10.setBackground(new java.awt.Color(193, 58, 37));
         jButton10.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jButton10.setForeground(new java.awt.Color(255, 255, 255));
-        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/Cliente.png"))); // NOI18N
+        jButton10.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/nueva-cuenta.png"))); // NOI18N
         jButton10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 130, 80, 80));
+        jButton10.setHideActionText(true);
+        jButton10.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton10.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton10ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton10, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 320, 160, 60));
 
         jButton11.setBackground(new java.awt.Color(193, 58, 37));
         jButton11.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jButton11.setForeground(new java.awt.Color(255, 255, 255));
-        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/inventario.png"))); // NOI18N
+        jButton11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/oficina.png"))); // NOI18N
         jButton11.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 80, 80));
+        jButton11.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        getContentPane().add(jButton11, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 250, 160, 60));
 
-        jLabel15.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel15.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel15.setText("INVENTARIOS");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 100, -1));
+        jButton12.setBackground(new java.awt.Color(193, 58, 37));
+        jButton12.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        jButton12.setForeground(new java.awt.Color(255, 255, 255));
+        jButton12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/inventario.png"))); // NOI18N
+        jButton12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton12.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        getContentPane().add(jButton12, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 180, 160, 60));
 
-        jLabel16.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel16.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel16.setText("FACTURAS");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 460, 80, -1));
+        jButton13.setBackground(new java.awt.Color(193, 58, 37));
+        jButton13.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        jButton13.setForeground(new java.awt.Color(255, 255, 255));
+        jButton13.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/nueva-cuenta.png"))); // NOI18N
+        jButton13.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton13.setHideActionText(true);
+        jButton13.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        jButton13.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton13ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 160, 60));
 
-        jLabel17.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        jLabel17.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel17.setText("CLIENTES");
-        getContentPane().add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 80, -1));
+        jLabel15.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel15.setText("Estado*");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, -1, 20));
 
-        Background_Clientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/MenuBusqueda.png"))); // NOI18N
-        getContentPane().add(Background_Clientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 520));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Activo", "Inactivo" }));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 150, -1));
+
+        bg_Clientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/MenuBusqueda.png"))); // NOI18N
+        bg_Clientes.setText("jLabel18");
+        getContentPane().add(bg_Clientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -345,6 +400,14 @@ public class VistaClientes extends javax.swing.JFrame {
     private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField5ActionPerformed
+
+    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton10ActionPerformed
+
+    private void jButton13ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton13ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jButton13ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -382,16 +445,24 @@ public class VistaClientes extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel Background_Clientes;
+    private javax.swing.JLabel bg_Clientes;
     private javax.swing.Box.Filler filler1;
+    private javax.swing.JLabel inventarios;
+    private javax.swing.JLabel inventarios1;
+    private javax.swing.JLabel inventarios2;
+    private javax.swing.JLabel inventarios3;
+    private javax.swing.JLabel inventarios4;
     private javax.swing.JButton jButton10;
     private javax.swing.JButton jButton11;
+    private javax.swing.JButton jButton12;
+    private javax.swing.JButton jButton13;
     private javax.swing.JButton jButton3;
     private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
     private javax.swing.JButton jButton7;
     private javax.swing.JButton jButton8;
     private javax.swing.JButton jButton9;
+    private javax.swing.JComboBox<String> jComboBox1;
     private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
@@ -401,8 +472,6 @@ public class VistaClientes extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel13;
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
-    private javax.swing.JLabel jLabel16;
-    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

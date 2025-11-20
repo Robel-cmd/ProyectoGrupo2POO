@@ -8,12 +8,12 @@ package vista;
  *
  * @author sofic
  */
-public class VistaInventarios extends javax.swing.JFrame {
+public class VistaUsuarios extends javax.swing.JFrame {
 
     /**
      * Creates new form VistaClientes
      */
-    public VistaInventarios() {
+    public VistaUsuarios() {
         initComponents();
     }
 
@@ -36,6 +36,11 @@ public class VistaInventarios extends javax.swing.JFrame {
         jMenuItem2 = new javax.swing.JMenuItem();
         label1 = new java.awt.Label();
         jButton8 = new javax.swing.JButton();
+        inventarios3 = new javax.swing.JLabel();
+        inventarios4 = new javax.swing.JLabel();
+        inventarios2 = new javax.swing.JLabel();
+        inventarios1 = new javax.swing.JLabel();
+        inventarios = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jScrollPane1 = new javax.swing.JScrollPane();
@@ -48,36 +53,31 @@ public class VistaInventarios extends javax.swing.JFrame {
         jLabel9 = new javax.swing.JLabel();
         jTextField1 = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
+        jTextField2 = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jTextField3 = new javax.swing.JTextField();
         jLabel12 = new javax.swing.JLabel();
         jTextField4 = new javax.swing.JTextField();
+        jLabel13 = new javax.swing.JLabel();
+        jTextField5 = new javax.swing.JTextField();
         jLabel14 = new javax.swing.JLabel();
+        jButton6 = new javax.swing.JButton();
         jButton7 = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
+        jDateChooser1 = new com.toedter.calendar.JDateChooser();
         jButton9 = new javax.swing.JButton();
-        jSpinner1 = new javax.swing.JSpinner();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        inventarios3 = new javax.swing.JLabel();
-        inventarios4 = new javax.swing.JLabel();
-        inventarios2 = new javax.swing.JLabel();
-        inventarios1 = new javax.swing.JLabel();
-        inventarios = new javax.swing.JLabel();
-        jButton6 = new javax.swing.JButton();
         jButton10 = new javax.swing.JButton();
         jButton11 = new javax.swing.JButton();
         jButton12 = new javax.swing.JButton();
         jButton13 = new javax.swing.JButton();
-        jLabel13 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
         jLabel15 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
-        jLabel16 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
         jComboBox2 = new javax.swing.JComboBox<>();
-        bg_Inventarios = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        bg_Clientes = new javax.swing.JLabel();
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/MenuBusqueda.png"))); // NOI18N
         jLabel1.setText("jLabel1");
@@ -111,6 +111,31 @@ public class VistaInventarios extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        inventarios3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios3.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios3.setText("Categorias");
+        getContentPane().add(inventarios3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 80, 20));
+
+        inventarios4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios4.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios4.setText("Inventarios");
+        getContentPane().add(inventarios4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 80, 20));
+
+        inventarios2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios2.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios2.setText("Usuarios");
+        getContentPane().add(inventarios2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 80, 20));
+
+        inventarios1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios1.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios1.setText("Factura");
+        getContentPane().add(inventarios1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 80, 20));
+
+        inventarios.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
+        inventarios.setForeground(new java.awt.Color(255, 255, 255));
+        inventarios.setText("Clientes");
+        getContentPane().add(inventarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 80, 20));
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
         getContentPane().add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, -1, -1));
 
@@ -126,7 +151,7 @@ public class VistaInventarios extends javax.swing.JFrame {
                 {null, null, null, null, null, null, null, null}
             },
             new String [] {
-                "Codigo Producto", "Nombre", "Descripcion", "Categoria", "Precio Unitario", "Precio Mayorista", "Cantidad", "Stock"
+                "RTN", "Nombres", "Apellidos", "Telefono", "E-MAIL", "Fecha Nacimiento", "Sexo", "Estado"
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -145,7 +170,7 @@ public class VistaInventarios extends javax.swing.JFrame {
         jScrollPane1.setViewportView(jTable1);
         jTable1.getColumnModel().getSelectionModel().setSelectionMode(javax.swing.ListSelectionModel.SINGLE_SELECTION);
 
-        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 220, 600, 180));
+        getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 220, 580, 180));
 
         jButton3.setBackground(new java.awt.Color(233, 148, 30));
         jButton3.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
@@ -169,15 +194,15 @@ public class VistaInventarios extends javax.swing.JFrame {
         jLabel4.setBackground(new java.awt.Color(255, 255, 255));
         jLabel4.setFont(new java.awt.Font("Arial", 3, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel4.setText("¡Registre los productos!");
+        jLabel4.setText("¡Registre los usuarios!");
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 20, -1, 30));
-        getContentPane().add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 220, 10, 180));
+        getContentPane().add(jScrollBar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 220, 10, 180));
 
         jLabel8.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel8.setText("Codigo Producto*");
+        jLabel8.setText("RTN *");
         getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 80, -1, 20));
 
-        jLabel9.setText("Complete la informacion de los productos");
+        jLabel9.setText("Complete la informacion de sus clientes");
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 50, -1, 20));
 
         jTextField1.setBackground(new java.awt.Color(255, 255, 255));
@@ -191,8 +216,18 @@ public class VistaInventarios extends javax.swing.JFrame {
         getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 100, 150, -1));
 
         jLabel10.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel10.setText("Categoria*");
-        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, 20));
+        jLabel10.setText("Apellido*");
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 80, -1, 20));
+
+        jTextField2.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField2.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField2ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 100, 150, -1));
 
         jLabel11.setForeground(new java.awt.Color(102, 102, 102));
         jLabel11.setText("Nombre *");
@@ -209,8 +244,8 @@ public class VistaInventarios extends javax.swing.JFrame {
         getContentPane().add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 100, 150, -1));
 
         jLabel12.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel12.setText("Precio Unitario*");
-        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, 20));
+        jLabel12.setText("Telefono*");
+        getContentPane().add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 120, -1, 20));
 
         jTextField4.setBackground(new java.awt.Color(255, 255, 255));
         jTextField4.setForeground(new java.awt.Color(0, 0, 0));
@@ -220,11 +255,33 @@ public class VistaInventarios extends javax.swing.JFrame {
                 jTextField4ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 150, -1));
+        getContentPane().add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 150, -1));
+
+        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel13.setText("Fecha Nacimiento*");
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 120, -1, 20));
+
+        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
+        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
+        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jTextField5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jTextField5ActionPerformed(evt);
+            }
+        });
+        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 140, 150, -1));
 
         jLabel14.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel14.setText("Cantidad*");
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, -1, 20));
+        jLabel14.setText("E-MAIL *");
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 120, -1, 20));
+
+        jButton6.setBackground(new java.awt.Color(193, 58, 37));
+        jButton6.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
+        jButton6.setForeground(new java.awt.Color(255, 255, 255));
+        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/factura (3).png"))); // NOI18N
+        jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        jButton6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 160, 60));
 
         jButton7.setBackground(new java.awt.Color(233, 148, 30));
         jButton7.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
@@ -253,57 +310,16 @@ public class VistaInventarios extends javax.swing.JFrame {
         jLabel7.setText("AGREGAR");
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 480, -1, -1));
 
+        jDateChooser1.setBackground(new java.awt.Color(255, 255, 255));
+        jDateChooser1.setForeground(new java.awt.Color(0, 0, 0));
+        getContentPane().add(jDateChooser1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 140, 150, -1));
+
         jButton9.setBackground(new java.awt.Color(233, 148, 30));
         jButton9.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
         jButton9.setForeground(new java.awt.Color(255, 255, 255));
         jButton9.setText("+");
         jButton9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jButton9, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 410, 60, 60));
-
-        jSpinner1.setOpaque(true);
-        getContentPane().add(jSpinner1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 150, -1));
-
-        jComboBox1.setToolTipText("");
-        jComboBox1.setOpaque(true);
-        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBox1ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 140, 150, 20));
-
-        inventarios3.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        inventarios3.setForeground(new java.awt.Color(255, 255, 255));
-        inventarios3.setText("Categorias");
-        getContentPane().add(inventarios3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 270, 80, 20));
-
-        inventarios4.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        inventarios4.setForeground(new java.awt.Color(255, 255, 255));
-        inventarios4.setText("Inventarios");
-        getContentPane().add(inventarios4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 200, 80, 20));
-
-        inventarios2.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        inventarios2.setForeground(new java.awt.Color(255, 255, 255));
-        inventarios2.setText("Usuarios");
-        getContentPane().add(inventarios2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 340, 80, 20));
-
-        inventarios1.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        inventarios1.setForeground(new java.awt.Color(255, 255, 255));
-        inventarios1.setText("Factura");
-        getContentPane().add(inventarios1, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 410, 80, 20));
-
-        inventarios.setFont(new java.awt.Font("Arial", 1, 14)); // NOI18N
-        inventarios.setForeground(new java.awt.Color(255, 255, 255));
-        inventarios.setText("Clientes");
-        getContentPane().add(inventarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 130, 80, 20));
-
-        jButton6.setBackground(new java.awt.Color(193, 58, 37));
-        jButton6.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(255, 255, 255));
-        jButton6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/factura (3).png"))); // NOI18N
-        jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
-        getContentPane().add(jButton6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 390, 160, 60));
 
         jButton10.setBackground(new java.awt.Color(193, 58, 37));
         jButton10.setFont(new java.awt.Font("Arial Black", 1, 36)); // NOI18N
@@ -349,39 +365,21 @@ public class VistaInventarios extends javax.swing.JFrame {
         });
         getContentPane().add(jButton13, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 110, 160, 60));
 
-        jLabel13.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel13.setText("Descripcion*");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 80, -1, 20));
-
-        jTextField5.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField5.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField5.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField5ActionPerformed(evt);
-            }
-        });
-        getContentPane().add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 100, 150, -1));
-
         jLabel15.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel15.setText("Precio Mayorista*");
-        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 120, -1, 20));
+        jLabel15.setText("Sexo*");
+        getContentPane().add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 160, -1, 20));
 
-        jTextField6.setBackground(new java.awt.Color(255, 255, 255));
-        jTextField6.setForeground(new java.awt.Color(0, 0, 0));
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
-        jTextField6.addActionListener(new java.awt.event.ActionListener() {
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Femenino", "Masculino" }));
+        jComboBox1.setToolTipText("");
+        jComboBox1.setOpaque(true);
+        jComboBox1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jTextField6ActionPerformed(evt);
+                jComboBox1ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 140, 150, -1));
+        getContentPane().add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(180, 180, 150, 20));
 
-        jLabel16.setForeground(new java.awt.Color(102, 102, 102));
-        jLabel16.setText("Stock*");
-        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, 20));
-
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Stock", "Sin Stock" }));
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "...", "Activo", "De Vacaciones", "Despedido" }));
         jComboBox2.setToolTipText("");
         jComboBox2.setOpaque(true);
         jComboBox2.addActionListener(new java.awt.event.ActionListener() {
@@ -391,8 +389,13 @@ public class VistaInventarios extends javax.swing.JFrame {
         });
         getContentPane().add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 180, 150, 20));
 
-        bg_Inventarios.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/MenuBusqueda.png"))); // NOI18N
-        getContentPane().add(bg_Inventarios, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 510));
+        jLabel16.setForeground(new java.awt.Color(102, 102, 102));
+        jLabel16.setText("Estado*");
+        getContentPane().add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(360, 160, -1, 20));
+
+        bg_Clientes.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/MenuBusqueda.png"))); // NOI18N
+        bg_Clientes.setText("jLabel18");
+        getContentPane().add(bg_Clientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 810, 510));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -405,6 +408,10 @@ public class VistaInventarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField1ActionPerformed
 
+    private void jTextField2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_jTextField2ActionPerformed
+
     private void jTextField3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField3ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField3ActionPerformed
@@ -413,9 +420,9 @@ public class VistaInventarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jTextField4ActionPerformed
 
-    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
+    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jComboBox1ActionPerformed
+    }//GEN-LAST:event_jTextField5ActionPerformed
 
     private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
         // TODO add your handling code here:
@@ -425,13 +432,9 @@ public class VistaInventarios extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButton13ActionPerformed
 
-    private void jTextField5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField5ActionPerformed
+    private void jComboBox1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox1ActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField5ActionPerformed
-
-    private void jTextField6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jTextField6ActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_jTextField6ActionPerformed
+    }//GEN-LAST:event_jComboBox1ActionPerformed
 
     private void jComboBox2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBox2ActionPerformed
         // TODO add your handling code here:
@@ -454,26 +457,27 @@ public class VistaInventarios extends javax.swing.JFrame {
                 }
             }
         } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(VistaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(VistaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(VistaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(VistaClientes.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+            java.util.logging.Logger.getLogger(VistaUsuarios.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
         //</editor-fold>
 
         /* Create and display the form */
         java.awt.EventQueue.invokeLater(new Runnable() {
             public void run() {
-                new VistaClientes().setVisible(true);
+                new VistaUsuarios().setVisible(true);
             }
         });
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel bg_Inventarios;
+    private javax.swing.JLabel bg_Clientes;
     private javax.swing.Box.Filler filler1;
     private javax.swing.JLabel inventarios;
     private javax.swing.JLabel inventarios1;
@@ -492,6 +496,7 @@ public class VistaInventarios extends javax.swing.JFrame {
     private javax.swing.JButton jButton9;
     private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
+    private com.toedter.calendar.JDateChooser jDateChooser1;
     private javax.swing.JDialog jDialog1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -517,13 +522,12 @@ public class VistaInventarios extends javax.swing.JFrame {
     private javax.swing.JScrollBar jScrollBar1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JSpinner jSpinner1;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextField jTextField1;
+    private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
     private java.awt.Label label1;
     // End of variables declaration//GEN-END:variables
 }

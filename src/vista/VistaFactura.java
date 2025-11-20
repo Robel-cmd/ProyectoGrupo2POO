@@ -108,8 +108,8 @@ public class VistaFactura extends javax.swing.JFrame {
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(190, 120, -1, -1));
 
         jLabel3.setForeground(new java.awt.Color(0, 0, 0));
-        jLabel3.setText("Nº Serie");
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(320, 60, -1, -1));
+        jLabel3.setText("Nº Factura");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(310, 60, -1, -1));
 
         jTextField2.setEditable(false);
         jTextField2.setBackground(new java.awt.Color(233, 148, 30));
@@ -254,7 +254,7 @@ public class VistaFactura extends javax.swing.JFrame {
 
         FechaActual.setBackground(new java.awt.Color(204, 204, 204));
         FechaActual.setForeground(new java.awt.Color(0, 0, 0));
-        getContentPane().add(FechaActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 70, -1));
+        getContentPane().add(FechaActual, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 200, 80, -1));
 
         jTextField9.setBackground(new java.awt.Color(204, 204, 204));
         jTextField9.setForeground(new java.awt.Color(0, 0, 0));
@@ -263,17 +263,17 @@ public class VistaFactura extends javax.swing.JFrame {
                 jTextField9ActionPerformed(evt);
             }
         });
-        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 480, 110, -1));
+        getContentPane().add(jTextField9, new org.netbeans.lib.awtextra.AbsoluteConstraints(650, 470, 110, -1));
 
         jLabel13.setForeground(new java.awt.Color(0, 0, 0));
         jLabel13.setText("Total Venta:");
-        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 480, -1, -1));
+        getContentPane().add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 470, -1, -1));
 
         jButton4.setBackground(new java.awt.Color(193, 58, 37));
         jButton4.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
         jButton4.setForeground(new java.awt.Color(0, 0, 0));
         jButton4.setText("Generar Factura");
-        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 480, -1, -1));
+        getContentPane().add(jButton4, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 470, -1, -1));
 
         jButton5.setBackground(new java.awt.Color(193, 58, 37));
         jButton5.setFont(new java.awt.Font("Segoe UI", 1, 12)); // NOI18N
@@ -284,10 +284,10 @@ public class VistaFactura extends javax.swing.JFrame {
                 jButton5ActionPerformed(evt);
             }
         });
-        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 480, -1, -1));
+        getContentPane().add(jButton5, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 470, -1, -1));
 
         jLabel14.setIcon(new javax.swing.ImageIcon(getClass().getResource("/vista/imagenes/bg_Facturacion.png"))); // NOI18N
-        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-110, 0, 910, 540));
+        getContentPane().add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(-110, 0, 920, 540));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
